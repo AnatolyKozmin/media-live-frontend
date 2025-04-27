@@ -1,0 +1,16 @@
+$color-primary: #3498db;
+$color-secondary: #2c3e50;
+$color-bg: #f9f9f9;
+$color-text: #333;
+$color-border: #ddd;
+
+$sidebar-width: 80vw; // Для мобильных — ширина в процентах
+$sidebar-collapsed-width: 0;
+$spacing: 16px; // Меньше для мобильных
+$radius: 8px;
+$font-size-base: 16px;
+
+$breakpoints: (
+  sm: 320px,
+  md: 414px
+);

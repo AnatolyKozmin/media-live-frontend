@@ -1,18 +1,17 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-// https://vite.dev/config/
-export default {
+export default defineConfig({
+  plugins: [vue()],
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/assets/styles/variables.scss";`, // Глобальные переменные
-      },
-    },
+        additionalData: `@import "./src/assets/styles/variables.scss"; @import "./src/assets/styles/mixins.scss";`
+      }
+    }
   },
-  resolve: {
-    alias: {
-      '@': '/src', // Удобный alias для импорта
-    },
-  },
-};
+  server: {
+    port: 5173,
+    open: true
+  }
+});
